@@ -1,0 +1,69 @@
+<!-- login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="login-container">
+      <!-- Tabs -->
+      <div class="tabs">
+        <button id="loginTab" class="active" onclick="showTab('loginForm')">Login</button>
+        <button id="registerTab" onclick="showTab('registerForm')">Register</button>
+      </div>
+      <hr>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="tab-content">
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" name="username" required>
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" required>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="tab-content" style="display: none;">
+        <label for="register-username">New Username:</label>
+        <input type="text" id="register-username" name="newUsername" required>
+
+        <label for="register-password">New Password:</label>
+        <input type="password" id="register-password" name="newPassword" required>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+
+  <script>
+    function showTab(tabName) {
+      // Hide all tabs
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.style.display = 'none');
+
+      // Deactivate all tab buttons
+      const tabButtons = document.querySelectorAll('.tabs button');
+      tabButtons.forEach(button => button.classList.remove('active'));
+
+      // Show the selected tab
+      document.getElementById(tabName).style.display = 'block';
+
+      // Activate the corresponding tab button
+      const activeTabButton = document.getElementById(tabName + 'Tab');
+      activeTabButton.classList.add('active');
+    }
+  </script>
+</body>
+
+</html>

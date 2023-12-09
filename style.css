@@ -1,0 +1,217 @@
+/* Global styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #cecaca;
+    margin: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+/* Headings */
+h1,
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+/* Main title styles */
+.main-title {
+    text-align: center;
+}
+
+/* Create item form styles */
+.create-item {
+    border: #333 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* View items table styles */
+.view-items {
+    border: #333 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Horizontal rule styles */
+hr {
+    padding: 1px;
+    background: #000000;
+}
+
+/* Input field styles */
+input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header and cell styles */
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* Table header background color */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+/* Modal content styles */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button styles */
+.close {
+    color: #ffffff;
+    background-color: #f00b0b;
+    margin: 0;
+    padding: 0 5px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Input field styles inside the modal */
+#name,
+#description {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Delete button styles */
+.delete-btn {
+    background-color: #f92d09;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover { 
+    background-color: #000000;
+    color: white;
+}
+
+
+/* Authentication page styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the container takes the full height of the viewport */
+    margin: 0;
+}
+
+.login-container {
+    max-width: 400px;
+    background-color: #fff;
+    border: #333 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Input field styles for authentication */
+.login-input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* tabs */
+.tabs{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+  button.active {
+    background-color: green;
+  }
+
+
+/* Button styles for authentication */
+.login-btn {
+    background-color: #000000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect for authentication */
+.login-btn:hover { 
+    background-color: #000000;
+    color: white;
+}
+
+/* logout button */
+.logout{
+    background-color: red;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}

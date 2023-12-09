@@ -1,0 +1,73 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Frontend</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1 class="main-title">W03 Learning Activity: REST, Alternatives, and Validation</h1>
+    <div class="nav-buttons">
+      <span class="username"><span id="loggedInUser"></span></span>
+      <button class="logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <!-- create a new item -->
+  <div class="create-item">
+    <h2>Create Item</h2>
+    <input type="text" id="name" placeholder="Item Name" autocomplete="off">
+    <input type="text" id="description" placeholder="Item Description" autocomplete="off">
+    <button onclick="createItem()">Create</button>
+  </div>
+
+  <hr>
+
+  <!-- view all items from the backend -->
+  <div class="view-items">
+    <h2>Items</h2>
+    <table id="itemsTable">
+      <thead>
+        <tr>
+          <th>S/N</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="itemsList"></tbody>
+    </table>
+  </div>
+
+  <!-- Modal for Editing Records -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Edit Item</h2>
+      <input type="text" id="editName" placeholder="Updated Name">
+      <input type="text" id="editDescription" placeholder="Updated Description">
+      <button onclick="updateItem()">Update</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    // we will use a variable 'loggedInUser' with the username of the logged-in user
+    const loggedInUser = ""; //logged username
+
+    // Update the content of the 'loggedInUser' span
+    document.getElementById("loggedInUser").innerText = loggedInUser;
+  </script>
+</body>
+
+</html>
