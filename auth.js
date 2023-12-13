@@ -1,3 +1,4 @@
+// frontend auth.js
 // Function to handle API requests
 async function fetchData(url, options) {
   try {
@@ -26,11 +27,17 @@ async function checkAuthAndRedirect() {
     if (response.authenticated) {
       // User is authenticated, redirect to index.html
       window.location.href = "index.html";
+    } else if (window.location.pathname !== "/login.html") {
+      // Redirect to login.html only if not already on the login page
+      window.location.href = "login.html";
     }
   } catch (error) {
     console.error(`Error checking authentication status: ${error.message}`);
+    // Redirect to login.html in case of an error
+    // window.location.href = "login.html";
   }
 }
+
 
 // Check user authentication status on page load
 document.addEventListener('DOMContentLoaded', async function () {

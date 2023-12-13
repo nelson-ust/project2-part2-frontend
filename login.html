@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="914116491169-nuins7horo0qvus6de2kg75l7t5odenu.apps.googleusercontent.com">
+
 </head>
 
 <body>
@@ -41,6 +44,11 @@
 
         <button type="submit">Register</button>
       </form>
+
+        <!-- Google Login Button -->
+        <hr>
+        <div class="g-signin2" data-onsuccess="onGoogleSignIn"></div>
+
     </div>
   </div>
 
@@ -63,6 +71,15 @@
       const activeTabButton = document.getElementById(tabName + 'Tab');
       activeTabButton.classList.add('active');
     }
+
+    function onGoogleSignIn(googleUser) {
+    // This function will be called when the user successfully signs in with Google
+    var id_token = googleUser.getAuthResponse().id_token;
+
+    // You can send the id_token to your server for further verification and authentication
+
+    console.log('Google Sign-In successful. ID Token: ' + id_token);
+  }
   </script>
 </body>
 
