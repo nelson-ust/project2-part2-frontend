@@ -39,16 +39,22 @@ async function checkAuthAndRedirect() {
 }
 
 
-// Check user authentication status on page load
 document.addEventListener('DOMContentLoaded', async function () {
   try {
-    await checkAuthAndRedirect();
+    const response = await checkAuthAndRedirect();
+    
+    if (!response.authenticated) {
+      // User is not authenticated, redirect to login page
+      window.location.href = response.redirect;
+    }
+    
     // You can perform other actions here if needed
     console.log("Page loaded");
   } catch (error) {
     console.error(`Error: ${error.message}`);
   }
 });
+
 
 // Event delegation for form submissions
 document.addEventListener("submit", async function (event) {
